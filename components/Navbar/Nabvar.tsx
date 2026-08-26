@@ -1,11 +1,14 @@
+// components/Navbar/Navbar.txt
+"use client"
+
 import Link from "next/link";
 import { CalendarDays } from "lucide-react";
 
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 bg-white border-b border-green-900/10">
-      <Link href="/" className="font-display font-semibold text-2xl text-green-950 leading-tight flex flex-col">
-        Dr. Dupont Jean
+      <Link href="/" className="font-display font-semibold text-2xl text-green-950 leading-tight flex flex-col gap-1.5">
+        Dr [X]
         <span className="font-mono text-sm uppercase tracking-widest text-green-700 font-normal">
           Médecine du sport — Dunkerque
         </span>

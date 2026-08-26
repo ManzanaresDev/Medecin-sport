@@ -1,6 +1,8 @@
 // app/interventions/page.tsx
+
 import Link from 'next/link';
 import { interventions } from '@/data/interventions';
+import styles from './InterventionsPage.module.css';
 
 export const metadata = {
   title: 'Interventions courantes — Médecine du Sport',
@@ -9,18 +11,59 @@ export const metadata = {
 
 export default function InterventionsPage() {
   return (
-    <section>
-      <h1>Interventions et pathologies courantes</h1>
-      <ul>
-        {interventions.map((item) => (
-          <li key={item.slug}>
-            <Link href={`/interventions/${item.slug}`}>
-              <h2>{item.titre}</h2>
-              <p>{item.resume}</p>
+    <div className={styles.page}>
+      <div className={styles.wrap}>
+        <header className={styles.header}>
+          <div className={styles.headerRow}>
+            <Link href="/" className={styles.brandMark}>
+              <div className={styles.cross} />
+              <div className={styles.brandName}>Dr [X]</div>
             </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
+          </div>
+        </header>
+
+        <section className={styles.hero}>
+          <p className={styles.eyebrow}>Médecine et chirurgie du sport — Dunkerque</p>
+          <h1 className={styles.h1}>
+            Interventions et <em>pathologies</em>
+            <br />
+            courantes
+          </h1>
+          <p className={styles.heroSub}>
+            Un aperçu des blessures et pathologies sportives les plus fréquemment prises en
+            charge au cabinet, du diagnostic initial au suivi post-traitement.
+          </p>
+        </section>
+
+        <section className={styles.listSection}>
+          <div className={styles.sectionHead}>
+            <p className={styles.eyebrow}>Domaines d'intervention</p>
+            <h2 className={styles.h2}>Toutes les interventions</h2>
+          </div>
+
+          <div className={styles.grid}>
+            {interventions.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/interventions/${item.slug}`}
+                className={styles.card}
+              >
+                <p className={styles.cardLabel}>Fiche pathologie</p>
+                <h3 className={styles.cardTitle}>{item.titre}</h3>
+                <p className={styles.cardResume}>{item.resume}</p>
+                <span className={styles.cardLink}>En savoir plus →</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <footer className={styles.footer}>
+          <div className={styles.footRow}>
+            <span>Dr [X] — Médecine et chirurgie du sport — RPPS [RPPS]</span>
+            <span className={styles.emergency}>Urgence vitale : appelez le 15</span>
+          </div>
+        </footer>
+      </div>
+    </div>
   );
 }

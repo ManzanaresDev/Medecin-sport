@@ -6,8 +6,8 @@
 }
 
 .hero {
-  position: relative;
-  min-height: 700px;
+  position: absolute;
+  inset: 0;
 
   background-image:
     linear-gradient(

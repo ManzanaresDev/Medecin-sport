@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Identité & contact */}
         <div>
           <p className="font-display font-semibold text-xl text-white mb-1">
-            Dr. Dupont Jean
+            Dr. [X]
           </p>
           <p className="font-mono text-xs uppercase tracking-widest text-green-400 mb-4">
             Médecine du sport — Dunkerque
@@ -69,7 +69,7 @@ export default function Footer() {
       {/* Barre légale */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 md:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
-          <p>© {new Date().getFullYear()} Dr. Dupont Jean. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Dr. [X]. Tous droits réservés.</p>
           <div className="flex gap-6">
             <Link href="/mentions-legales" className="hover:text-white transition-colors">
               Mentions légales

@@ -1,6 +1,6 @@
 import { Oswald, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./Footer/Footer";
+import Footer from "@/components/Footer/Footer";
 
 const oswald = Oswald({
   subsets: ["latin"],
