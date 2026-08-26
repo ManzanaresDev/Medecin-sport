@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Nabvar";
 import Link from "next/link";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, ArrowRight } from "lucide-react";
+import { interventions } from "@/data/interventions";
 
 export default function Home() {
   return (
@@ -8,7 +9,6 @@ export default function Home() {
       <Navbar />
 
       <div className="relative">
-        {/* Image de fond : couvre tout le bloc (hero + chevauchement), quelle que soit sa hauteur reelle */}
         <div className="hero -z-10" />
 
         <section className="flex items-center min-h-[420px] md:min-h-[520px] pb-10">
@@ -34,10 +34,36 @@ export default function Home() {
         </section>
 
         <section className="specialites relative z-10 -mt-6 md:-mt-10 bg-white/70 py-24 px-6 md:px-16">
-          <h2 className="font-display text-3xl font-semibold text-green-900 mb-10">
+          <p className="font-mono text-xs uppercase tracking-widest text-green-700 mb-4">
             Domaines d'intervention
+          </p>
+          <h2 className="font-display text-3xl font-semibold text-green-900 mb-10">
+            Toutes les interventions
           </h2>
-          {/* Cartes vers /interventions/[slug] */}
+
+          <div className="grid gap-px bg-green-900/10 border border-green-900/10 md:grid-cols-2">
+            {interventions.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/interventions/${item.slug}`}
+                className="group block bg-white/80 hover:bg-white p-7 transition-colors"
+              >
+                <p className="font-mono text-[11px] uppercase tracking-widest text-green-700 mb-2.5">
+                  Fiche pathologie
+                </p>
+                <h3 className="font-display text-xl font-semibold text-green-950 mb-2.5">
+                  {item.titre}
+                </h3>
+                <p className="text-sm leading-relaxed text-green-950/70 mb-4">
+                  {item.resume}
+                </p>
+                <span className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-[#1B71E1]">
+                  En savoir plus
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" strokeWidth={2} />
+                </span>
+              </Link>
+            ))}
+          </div>
         </section>
       </div>
 

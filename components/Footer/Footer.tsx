@@ -12,11 +12,11 @@ export default function Footer() {
           <p className="font-mono text-xs uppercase tracking-widest text-green-400 mb-4">
             Médecine du sport — Dunkerque
           </p>
-          <address className="not-italic text-sm leading-relaxed space-y-1">
-            <p>[Adresse du cabinet]</p>
-            <p>[Code postal] Dunkerque</p>
-            <p>[Téléphone]</p>
-            <p>[Email]</p>
+          <address className="not-italic text-sm leading-relaxed space-y-1  text-lg">
+            <p className="text-lg">[Adresse du cabinet]</p>
+            <p className="text-lg">[Code postal] Dunkerque</p>
+            <p className="text-lg">[Téléphone]</p>
+            <p className="text-lg">[Email]</p>
           </address>
         </div>
 
@@ -26,9 +26,9 @@ export default function Footer() {
             Horaires
           </p>
           <ul className="text-sm leading-relaxed space-y-1">
-            <li>Lundi – Vendredi : [horaires]</li>
-            <li>Samedi : [horaires ou "Fermé"]</li>
-            <li>Dimanche : Fermé</li>
+            <li className="text-lg">Lundi – Vendredi : [horaires]</li>
+            <li className="text-lg">Samedi : [horaires ou "Fermé"]</li>
+            <li className="text-lg">Dimanche : Fermé</li>
           </ul>
         </div>
 
@@ -38,16 +38,16 @@ export default function Footer() {
             Navigation
           </p>
           <nav className="flex flex-col gap-2 text-sm" aria-label="Navigation du footer">
-            <Link href="/interventions" className="hover:text-white transition-colors">
+            <Link href="/interventions" className="hover:text-white transition-colors text-lg">
               Domaines d'intervention
             </Link>
-            <Link href="/a-propos" className="hover:text-white transition-colors">
+            <Link href="/a-propos" className="hover:text-white transition-colors text-lg">
               Le praticien
             </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link href="/contact" className="hover:text-white transition-colors text-lg">
               Contact
             </Link>
-            <Link href="/prendre-rendez-vous" className="hover:text-white transition-colors">
+            <Link href="/prendre-rendez-vous" className="hover:text-white transition-colors text-lg">
               Prendre rendez-vous
             </Link>
           </nav>
@@ -59,9 +59,9 @@ export default function Footer() {
             Informations professionnelles
           </p>
           <ul className="text-sm leading-relaxed space-y-1">
-            <li>RPPS : [numéro RPPS]</li>
-            <li>Inscrit au Conseil de l'Ordre des Médecins [département]</li>
-            <li>[Diplômes / affiliations si pertinent]</li>
+            <li className="text-lg">RPPS : [numéro RPPS]</li>
+            <li className="text-lg">Inscrit au Conseil de l'Ordre des Médecins [département]</li>
+            <li className="text-lg">[Diplômes / affiliations si pertinent]</li>
           </ul>
         </div>
       </div>
@@ -71,10 +71,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 md:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Dr. [X]. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <Link href="/mentions-legales" className="hover:text-white transition-colors">
+            <Link href="/legal/mentions-legales" className="hover:text-white transition-colors text-base">
               Mentions légales
             </Link>
-            <Link href="/confidentialite" className="hover:text-white transition-colors">
+            <Link href="/legal/politique-confidentialite" className="hover:text-white transition-colors text-base">
               Politique de confidentialité
             </Link>
           </div>
