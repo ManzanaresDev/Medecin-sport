@@ -1,14 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 @import "tailwindcss";
 
-@theme inline {
-  --font-display: var(--font-oswald);
-  --font-mono: var(--font-plex-mono);
+:root {
+  --ink: #16241F;
+  --paper: #EEF2ED;
+  --paper-2: #E5EAE2;
+  --sage: #6E8F76;
+  --sage-dark: #4C6B54;
+  --petrol: #1F4E4A;
+  --petrol-light: #2C6B65;
+  --sand: #E7DEC8;
+  --sand-line: #C9BC98;
+  --line: #CDD3C6;
+  --danger: #A34630;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
-.hero {
+/* Hero de la page d'accueil */
+.homeHero {
   position: absolute;
   inset: 0;
-
   background-image:
     linear-gradient(
       to right,
@@ -18,7 +33,6 @@
       rgba(20, 83, 45, 1) 60%
     ),
     url("/images/sport.jpg");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

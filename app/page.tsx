@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
 
       <div className="relative">
-        <div className="hero -z-10" />
+        <div className="homeHero -z-10" />
 
         <section className="flex items-center min-h-[420px] md:min-h-[520px] pb-10">
           <div className="ml-auto w-full max-w-xl px-6 md:px-16 text-white text-right">
