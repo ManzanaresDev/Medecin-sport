@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, type JSX } from 'react';
 import Link from 'next/link';
 import styles from './ContactPage.module.css';
 
