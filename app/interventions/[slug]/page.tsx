@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, CalendarDays } from 'lucide-react';
 import { interventions, getInterventionBySlug } from '@/data/interventions';
-import styles from '../InterventionDetail.module.css';
+import styles from './InterventionDetail.module.css';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
