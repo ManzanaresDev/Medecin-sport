@@ -55,3 +55,34 @@
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
+
+/* MODAL PRISE DE RDV */
+
+.choiceWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 48px 24px;
+}
+
+.choiceText {
+  font-size: 15px;
+  color: #6b7280;
+  text-align: center;
+  margin: 0;
+}
+
+.backButton {
+  margin-top: 16px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.backButton:hover {
+  color: #1a1a1a;
+}

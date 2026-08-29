@@ -1,0 +1,109 @@
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.optionCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.1s ease;
+}
+
+.optionCard:hover {
+  border-color: #d1d5db;
+  background-color: #fafafa;
+  transform: translateY(-1px);
+}
+
+.optionCard:focus-visible {
+  outline: 2px solid var(--accent, #1d5d5a);
+  outline-offset: 2px;
+}
+
+.optionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--accent, #1d5d5a) 12%, transparent);
+  color: var(--accent, #1d5d5a);
+}
+
+.optionText {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.optionLabel {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.optionDescription {
+  font-size: 13.5px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.optionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--accent, #1d5d5a);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.optionLink:hover {
+  text-decoration: underline;
+}
+
+.cabinetActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--accent, #1d5d5a);
+  color: var(--accent, #1d5d5a);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.contactButton:hover {
+  background-color: var(--accent, #1d5d5a);
+  color: #fff;
+}
+
+.optionArrow {
+  flex-shrink: 0;
+  color: #9ca3af;
+}

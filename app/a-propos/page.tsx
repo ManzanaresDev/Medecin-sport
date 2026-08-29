@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Navbar from '@/components/Navbar/Nabvar';
 import styles from './AProposPage.module.css';
 
 export const metadata = {

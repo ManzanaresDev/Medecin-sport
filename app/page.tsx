@@ -1,6 +1,5 @@
 // app/page.tsx
 
-import Navbar from "@/components/Navbar/Nabvar";
 import Link from "next/link";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import { interventions } from "@/data/interventions";

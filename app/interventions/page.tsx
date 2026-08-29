@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Navbar from '@/components/Navbar/Nabvar';
 import { interventions } from '@/data/interventions';
 import styles from './InterventionsPage.module.css';
 
