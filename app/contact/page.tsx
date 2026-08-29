@@ -2,6 +2,7 @@
 
 import React, { useMemo } from 'react';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar/Nabvar';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactSchema, type ContactFormData } from '@/lib/contactSchema';
@@ -55,17 +56,16 @@ export default function ContactPage() {
 
   // Simulation d'envoie de formulaire => Commenter la fonction et décommenter la fonction précédente pour restituir l'envoie!
   const onSubmit = async (data: ContactFormData) => {
-  // TODO: réactiver l'envoi réel une fois nodemailer configuré
-  // await sendEmail(data);
+    // TODO: réactiver l'envoi réel une fois nodemailer configuré
+    // await sendEmail(data);
 
-  console.log('Données du formulaire (envoi désactivé pour le moment) :', data);
-  reset();
-};
+    console.log('Données du formulaire (envoi désactivé pour le moment) :', data);
+    reset();
+  };
 
   return (
     <div className={styles.page}>
       <div className={styles.wrap}>
-        {/* ... header / hero / horaires / infos inchangés ... */}
 
         <section className={styles.formSection} id="contact">
           <div className={styles.sectionHead}>

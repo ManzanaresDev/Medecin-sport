@@ -1,6 +1,7 @@
 import { Oswald, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Navbar/Nabvar";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const plexMono = IBM_Plex_Mono({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${oswald.variable} ${plexMono.variable}`}>
+      <Navbar />
       <body>{children}</body>
   <Footer />
     </html>

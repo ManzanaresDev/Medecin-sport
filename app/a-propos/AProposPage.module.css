@@ -1,20 +1,4 @@
 .page {
-  --ink: #16241f;
-  --paper: #eef2ed;
-  --paper-2: #e5eae2;
-  --sage: #6e8f76;
-  --sage-dark: #4c6b54;
-  --petrol: #1f4e4a;
-  --petrol-light: #2c6b65;
-  --sand: #e7dec8;
-  --sand-line: #c9bc98;
-  --line: #cdd3c6;
-  --danger: #a34630;
-
-  --font-display: 'Fraunces', serif;
-  --font-body: 'Work Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-
   min-height: 100vh;
   background: var(--paper);
   color: var(--ink);

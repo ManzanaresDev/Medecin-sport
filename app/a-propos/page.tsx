@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Navbar from '@/components/Navbar/Nabvar';
 import styles from './AProposPage.module.css';
 
 export const metadata = {
@@ -74,23 +75,6 @@ export default function AProposPage() {
   return (
     <div className={styles.page}>
       <div className={styles.wrap}>
-        {/* HEADER */}
-        <header className={styles.header}>
-          <div className={styles.headerRow}>
-            <Link href="/" className={styles.brandMark}>
-              <span className={styles.cross} aria-hidden="true" />
-              <span className={styles.brandName}>Dr [Nom]</span>
-            </Link>
-
-            <nav className={styles.nav} aria-label="Navigation principale">
-              <Link href="/">Accueil</Link>
-              <Link href="/a-propos" className={styles.active}>
-                À propos
-              </Link>
-              <Link href="/contact">Contact</Link>
-            </nav>
-          </div>
-        </header>
 
         <main>
           {/* HERO */}

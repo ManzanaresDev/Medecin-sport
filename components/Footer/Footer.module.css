@@ -1,0 +1,226 @@
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  background: #052e16;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================================
+   CONTENU PRINCIPAL
+   ========================================================= */
+
+.footerContent {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 64px 64px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.column {
+  min-width: 0;
+}
+
+/* =========================================================
+   IDENTITÉ
+   ========================================================= */
+
+.brand {
+  margin: 0 0 4px;
+
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  color: #fff;
+}
+
+.subtitle {
+  margin: 0 0 18px;
+
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: #4ade80;
+}
+
+.address {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.address p {
+  margin: 0;
+}
+
+/* =========================================================
+   TITRES DE COLONNES
+   ========================================================= */
+
+.heading {
+  margin: 0 0 18px;
+
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: #4ade80;
+}
+
+/* =========================================================
+   LISTES
+   ========================================================= */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list li {
+  margin: 0;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.navigation a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+
+  transition: color 0.15s ease;
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+/* =========================================================
+   BARRE LÉGALE
+   ========================================================= */
+
+.legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legalContent {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 24px 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.legalContent p {
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.legalLinks a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+
+  transition: color 0.15s ease;
+}
+
+.legalLinks a:hover {
+  color: #fff;
+}
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .footerContent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    padding: 56px 40px;
+  }
+
+  .legalContent {
+    padding: 22px 40px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 36px;
+
+    padding: 48px 24px;
+  }
+
+  .legalContent {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 22px 24px;
+  }
+
+  .legalLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

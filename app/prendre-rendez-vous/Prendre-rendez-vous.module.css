@@ -1,0 +1,57 @@
+.page {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 2.5rem;
+  }
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #f1f5f9; /* slate-100 */
+}
+
+.iframeContainer {
+  overflow: hidden;
+  padding: 0;
+}
+
+.iframe {
+  width: 100%;
+  min-height: 700px;
+  border: 0;
+}
+
+.linkWrapper {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #64748b; /* slate-500 */
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #cbd5e1; /* slate-300 */
+}
+
+.glassPanel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}

@@ -37,15 +37,17 @@
 .headerRow{
   display:flex;align-items:center;
 }
-.brandMark{
-  display:flex;align-items:center;gap:12px;
-  background:rgba(20, 83, 45, 0.35);
-  border-radius:8px;
-  padding:6px 10px;
-  margin:-6px -10px;
-  text-decoration:none;
-  color:inherit;
-  transition:background .15s ease;
+.brandMark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s ease;
+}
+
+.brandMark:hover {
+  opacity: 0.75;
 }
 .cross{
   width:30px;height:30px;position:relative;flex:none;

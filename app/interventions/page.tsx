@@ -1,6 +1,5 @@
-// app/interventions/page.tsx
-
 import Link from 'next/link';
+import Navbar from '@/components/Navbar/Nabvar';
 import { interventions } from '@/data/interventions';
 import styles from './InterventionsPage.module.css';
 
@@ -13,14 +12,6 @@ export default function InterventionsPage() {
   return (
     <div className={styles.page}>
       <div className={styles.wrap}>
-        <header className={styles.header}>
-          <div className={styles.headerRow}>
-            <Link href="/" className={styles.brandMark}>
-              <div className={styles.cross} />
-              <div className={styles.brandName}>Dr [X]</div>
-            </Link>
-          </div>
-        </header>
 
         <section className={styles.hero}>
           <p className={styles.eyebrow}>Médecine et chirurgie du sport — Dunkerque</p>

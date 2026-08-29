@@ -1,0 +1,204 @@
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 48px;
+
+  background: #fff;
+  border-bottom: 1px solid rgba(20, 83, 45, 0.1);
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  color: #052e16;
+
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  text-decoration: none;
+}
+
+.brandSubtitle {
+  color: var(--sage-dark);
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.navLink {
+  position: relative;
+
+  padding-bottom: 4px;
+
+  color: var(--ink);
+
+  text-decoration: none;
+}
+
+/* Ligne animée sous le lien */
+
+.navLink::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #14532d;
+
+  transition: width 0.2s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   BOUTON RENDEZ-VOUS
+   ========================================================= */
+
+.appointmentButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+
+  border-radius: 6px;
+
+  background: #1b71e1;
+  color: #fff;
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  text-decoration: none;
+
+  transition:
+    background 0.15s ease,
+    transform 0.12s ease;
+}
+
+.appointmentButton:hover {
+  background: #1560c4;
+}
+
+.appointmentButton:active {
+  transform: scale(0.98);
+}
+
+.appointmentIcon {
+  width: 16px;
+  height: 16px;
+
+  flex: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 20px 32px;
+  }
+
+  .nav {
+    gap: 24px;
+    font-size: 14px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .brandSubtitle {
+    font-size: 12px;
+  }
+
+  .appointmentButton {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 850px) {
+  .nav {
+    display: none;
+  }
+
+  .navbar {
+    padding: 18px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 16px 18px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .brandSubtitle {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  .appointmentButton {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+
+  .appointmentIcon {
+    width: 14px;
+    height: 14px;
+  }
+}
