@@ -29,6 +29,10 @@
 
 .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
 
+@media (max-width:640px){
+  .wrap{padding:0 18px;}
+}
+
 /* ---------- HEADER (sans navigation) ---------- */
 .header{
   padding:28px 0 24px;
@@ -36,6 +40,9 @@
 }
 .headerRow{
   display:flex;align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
 }
 .brandMark {
   display: flex;
@@ -66,6 +73,11 @@
 
 /* ---------- HERO ---------- */
 .hero{padding:64px 0 56px;}
+
+@media (max-width:640px){
+  .hero{padding:40px 0 32px;}
+}
+
 .eyebrow{
   font-family:var(--font-mono);
   font-size:12.5px;
@@ -77,12 +89,17 @@
 .h1{
   font-family:var(--font-display);
   font-weight:500;
-  font-size:clamp(38px,6vw,58px);
-  line-height:1.04;
+  font-size:clamp(32px,6vw,58px);
+  line-height:1.08;
   letter-spacing:-.01em;
   margin:0 0 22px;
   max-width:11.5em;
 }
+
+@media (max-width:480px){
+  .h1{max-width:100%;margin-bottom:16px;}
+}
+
 .h1 em{
   font-style:italic;
   color:var(--petrol);
@@ -96,9 +113,23 @@
   margin:0;
 }
 
+@media (max-width:640px){
+  .heroSub{font-size:15.5px;}
+}
+
 /* ---------- LISTE DES INTERVENTIONS ---------- */
 .listSection{padding:0 0 80px;border-top:1px solid var(--line);}
+
+@media (max-width:640px){
+  .listSection{padding:0 0 48px;}
+}
+
 .sectionHead{padding:56px 0 34px;}
+
+@media (max-width:640px){
+  .sectionHead{padding:32px 0 20px;}
+}
+
 .sectionHead .eyebrow{margin-bottom:12px;}
 .h2{
   font-family:var(--font-display);
@@ -106,6 +137,11 @@
   font-size:30px;
   margin:0;
 }
+
+@media (max-width:640px){
+  .h2{font-size:23px;}
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -122,6 +158,11 @@
   transition:background .15s ease;
 }
 .card:hover{background:var(--paper-2);}
+
+@media (max-width:640px){
+  .card{padding:20px 18px;}
+}
+
 .cardLabel{
   font-family:var(--font-mono);
   font-size:11px;
@@ -161,6 +202,11 @@
   color:#5C6B60;
 }
 .footRow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;}
+
+@media (max-width:480px){
+  .footRow{flex-direction:column;align-items:flex-start;font-size:12px;}
+}
+
 .emergency{
   color:var(--danger);
   font-weight:800;

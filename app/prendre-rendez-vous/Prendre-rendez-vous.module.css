@@ -1,9 +1,12 @@
 .page {
   min-height: 100vh;
+  background: #EEF2ED;
 }
 
 .content {
   padding: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -14,10 +17,17 @@
 
 .title {
   margin-bottom: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   line-height: 1.75rem;
   font-weight: 600;
-  color: #f1f5f9; /* slate-100 */
+  color: #16241F; /* corrigé : était #f1f5f9 (quasi invisible sur fond clair) */
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .iframeContainer {
@@ -31,32 +41,41 @@
   border: 0;
 }
 
+/* Sur mobile, une hauteur fixe aussi grande pousse tout le contenu utile
+   hors écran au premier scroll : on réduit légèrement. */
+@media (max-width: 640px) {
+  .iframe {
+    min-height: 520px;
+  }
+}
+
 .linkWrapper {
   margin-top: 1rem;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #64748b; /* slate-500 */
+  color: #5C6B60;
 }
 
 .link {
   text-decoration: underline;
+  color: #1F4E4A;
 }
 
 .link:hover {
-  color: #cbd5e1; /* slate-300 */
+  color: #2C6B65;
 }
 
 .glassPanel {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Remplacé : l'effet verre translucide blanc-sur-blanc supposait un fond
+     sombre. Sur le thème clair actuel, ça devenait quasi invisible. */
+  background: #ffffff;
+  border: 1px solid #CDD3C6;
   border-radius: 1rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(22, 36, 31, 0.08);
 }
 
-/* MODAL PRISE DE RDV */
+/* PRISE DE RDV */
 
 .choiceWrapper {
   display: flex;
@@ -66,9 +85,16 @@
   padding: 48px 24px;
 }
 
+@media (max-width: 640px) {
+  .choiceWrapper {
+    padding: 24px 4px;
+    gap: 16px;
+  }
+}
+
 .choiceText {
   font-size: 15px;
-  color: #6b7280;
+  color: #5C6B60;
   text-align: center;
   margin: 0;
 }
@@ -77,12 +103,14 @@
   margin-top: 16px;
   border: none;
   background: transparent;
-  color: #6b7280;
+  color: #5C6B60;
   font-size: 14px;
   cursor: pointer;
   text-decoration: underline;
+  /* zone de clic confortable au doigt (min. 44px recommandé) */
+  padding: 10px 8px;
 }
 
 .backButton:hover {
-  color: #1a1a1a;
+  color: #16241F;
 }

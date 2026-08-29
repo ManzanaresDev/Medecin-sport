@@ -37,6 +37,15 @@
   background-attachment: fixed;
 }
 
+/* background-attachment: fixed est mal supporté sur iOS Safari (saccades,
+   parfois l'image disparaît au scroll). On repasse en scroll normal sous
+   768px, où l'effet parallax ne se voit de toute façon presque pas. */
+@media (max-width: 768px) {
+  .mainBg {
+    background-attachment: scroll;
+  }
+}
+
 /* =========================================================
    HERO
    ========================================================= */
@@ -64,6 +73,20 @@
     rgba(20, 83, 45, 0.8) 50%,
     rgba(20, 83, 45, 1) 60%
   );
+}
+
+/* Sur mobile, le texte prend presque toute la largeur : un dégradé
+   qui ne devient opaque qu'à 60% laisse une bande claire à gauche
+   qui ne sert plus à rien et réduit le contraste du texte. On assombrit
+   plus tôt et plus fort pour garder le texte lisible sur toutes les photos. */
+@media (max-width: 767px) {
+  .hero::before {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(20, 83, 45, 0.55) 0%,
+      rgba(20, 83, 45, 0.9) 100%
+    );
+  }
 }
 
 .heroContent {

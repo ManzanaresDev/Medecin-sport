@@ -7,14 +7,16 @@
   top: 0;
   z-index: 50;
 
+  background: #fff;
+  border-bottom: 1px solid rgba(20, 83, 45, 0.1);
+}
+
+.navbarRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 20px 48px;
-
-  background: #fff;
-  border-bottom: 1px solid rgba(20, 83, 45, 0.1);
 }
 
 /* =========================================================
@@ -48,7 +50,7 @@
 }
 
 /* =========================================================
-   NAVIGATION
+   NAVIGATION (desktop)
    ========================================================= */
 
 .nav {
@@ -73,8 +75,6 @@
   text-decoration: none;
 }
 
-/* Ligne animée sous le lien */
-
 .navLink::after {
   content: "";
 
@@ -95,8 +95,14 @@
 }
 
 /* =========================================================
-   BOUTON RENDEZ-VOUS
+   ACTIONS (CTA + bouton menu)
    ========================================================= */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .appointmentButton {
   display: inline-flex;
@@ -140,12 +146,88 @@
   flex: none;
 }
 
+/* Bouton hamburger : masqué sur desktop, affiché sous 850px */
+.menuButton {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background: rgba(20, 83, 45, 0.08);
+}
+
+/* =========================================================
+   MENU MOBILE (dropdown)
+   ========================================================= */
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  padding: 12px 20px 20px;
+  border-top: 1px solid rgba(20, 83, 45, 0.1);
+
+  background: #fff;
+}
+
+.mobileCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 13px 16px;
+  margin-bottom: 8px;
+
+  border-radius: 6px;
+  background: #1b71e1;
+  color: #fff;
+
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.mobileNavLink {
+  padding: 14px 6px;
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  color: var(--ink);
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(20, 83, 45, 0.08);
+}
+
+.mobileNavLink:last-child {
+  border-bottom: none;
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
 
 @media (max-width: 1100px) {
-  .navbar {
+  .navbarRow {
     padding: 20px 32px;
   }
 
@@ -169,17 +251,27 @@
 }
 
 @media (max-width: 850px) {
+  /* Le menu horizontal et le CTA du header laissent place au hamburger :
+     ils sont repris dans le panneau .mobileNav ci-dessous. */
   .nav {
     display: none;
   }
 
-  .navbar {
+  .appointmentButton {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .navbarRow {
     padding: 18px 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .navbar {
+  .navbarRow {
     padding: 16px 18px;
   }
 
@@ -190,15 +282,5 @@
   .brandSubtitle {
     font-size: 10px;
     letter-spacing: 0.05em;
-  }
-
-  .appointmentButton {
-    padding: 9px 12px;
-    font-size: 10px;
-  }
-
-  .appointmentIcon {
-    width: 14px;
-    height: 14px;
   }
 }
