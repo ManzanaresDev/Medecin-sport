@@ -1,27 +1,30 @@
-import Link from 'next/link';
-import { interventions } from '@/data/interventions';
-import styles from './InterventionsPage.module.css';
+import Link from "next/link";
+import { interventions } from "@/data/interventions";
+import styles from "./InterventionsPage.module.css";
 
 export const metadata = {
-  title: 'Interventions courantes — Médecine du Sport',
-  description: 'Liste des pathologies et interventions sportives les plus fréquentes.',
+  title: "Interventions courantes — Médecine du Sport",
+  description:
+    "Liste des pathologies et interventions sportives les plus fréquentes.",
 };
 
 export default function InterventionsPage() {
   return (
     <div className={styles.page}>
       <div className={styles.wrap}>
-
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>Médecine et chirurgie du sport — Dunkerque</p>
+          <p className={styles.eyebrow}>
+            Médecine et chirurgie du sport — Dunkerque
+          </p>
           <h1 className={styles.h1}>
             Interventions et <em>pathologies</em>
             <br />
             courantes
           </h1>
           <p className={styles.heroSub}>
-            Un aperçu des blessures et pathologies sportives les plus fréquemment prises en
-            charge au cabinet, du diagnostic initial au suivi post-traitement.
+            Un aperçu des blessures et pathologies sportives les plus
+            fréquemment prises en charge au cabinet, du diagnostic initial au
+            suivi post-traitement.
           </p>
         </section>
 
@@ -47,12 +50,12 @@ export default function InterventionsPage() {
           </div>
         </section>
 
-        <footer className={styles.footer}>
+        {/* <footer className={styles.footer}>
           <div className={styles.footRow}>
             <span>Dr [X] — Médecine et chirurgie du sport — RPPS [RPPS]</span>
             <span className={styles.emergency}>Urgence vitale : appelez le 15</span>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </div>
   );
