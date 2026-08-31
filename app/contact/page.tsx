@@ -291,13 +291,6 @@ export default function ContactPage() {
             </div>
           )}
         </section>
-
-        {/* <footer className={styles.footer}>
-          <div className={styles.footRow}>
-            <span>Dr [X] — Médecin généraliste — RPPS [RPPS]</span>
-            <span className={styles.emergency}>Urgence vitale : appelez le 15</span>
-          </div>
-        </footer> */}
       </div>
     </div>
   );

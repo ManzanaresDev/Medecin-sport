@@ -93,7 +93,7 @@ export default function AProposPage() {
 
             <div className={styles.heroActions}>
               <Link
-                href="/contact#contact"
+                href="/prendre-rendez-vous"
                 className={`${styles.btn} ${styles.btnPrimary}`}
               >
                 Prendre rendez-vous
@@ -289,19 +289,6 @@ export default function AProposPage() {
             </div>
           </section>
         </main>
-
-        {/* FOOTER */}
-        {/* <footer className={styles.footer}>
-          <div className={styles.footRow}>
-            <span>
-              Dr [Nom] — Chirurgien orthopédiste — RPPS [RPPS]
-            </span>
-
-            <span className={styles.emergency}>
-              Urgence vitale : appelez le 15
-            </span>
-          </div>
-        </footer> */}
       </div>
     </div>
   );

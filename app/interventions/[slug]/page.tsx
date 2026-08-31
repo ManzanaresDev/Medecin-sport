@@ -88,13 +88,6 @@ export default async function InterventionDetailPage({ params }: PageProps) {
             </Link>
           </div>
         </article>
-
-        {/* <footer className={styles.footer}>
-          <div className={styles.footRow}>
-            <span>Dr [X] — Médecine et chirurgie du sport — RPPS [RPPS]</span>
-            <span className={styles.emergency}>Urgence vitale : appelez le 15</span>
-          </div>
-        </footer> */}
       </div>
     </div>
   );
