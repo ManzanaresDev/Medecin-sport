@@ -15,12 +15,18 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="fr" className={`${oswald.variable} ${plexMono.variable}`}>
-      <Navbar />
-      <body>{children}</body>
-  <Footer />
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
